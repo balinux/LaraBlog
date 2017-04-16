@@ -8,7 +8,7 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    You are logged in!
+                    <a href="{{url('/post/create')}}"><button type="button" class="btn btn-primary">Buat postingan</button></a>
                 </div>
             </div>
         </div>
