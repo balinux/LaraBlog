@@ -32,10 +32,10 @@
 > Change the storage and cache directories permission
 > 
 > sudo chmod -R 777 storage
-> 
+>sudo chmod -R 777 storage 
 > sudo chmod -R 777 bootstrap/cache
 > Regenerate the composer autoload file
-> 
+> sudo chown -R cabox:www-data storage/
 > composer dump-autoload
 > 
 
