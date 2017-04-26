@@ -38,3 +38,15 @@
 > 
 > composer dump-autoload
 > 
+
+
+----------
+##link Penting untuk upgrade PHP ##
+
+
+https://www.bjornjohansen.no/upgrade-to-php7
+https://www.stewright.me/2016/03/upgrade-php-7-0-ubuntu/
+http://stackoverflow.com/questions/35715400/laravel-5-2-could-not-open-laravel-log
+http://stackoverflow.com/questions/28468625/laravel-5-failed-opening-required-bootstrap-vendor-autoload-php
+https://discuss.flarum.org/d/3741-after-installed-php7-then-i-run-composer-install-getting-errors
+https://laracasts.com/discuss/channels/forge/error-while-updating-to-php-70-on-forge
