@@ -19,6 +19,13 @@ class RoleTableSeeder extends Seeder
         $role_author = Role::where('name', 'Author')->first();
 
         $admin = new User;
+        $admin->name = 'Balinux';
+        $admin->email = 'ryojuniyantara@gmail.com';
+        $admin->password = bcrypt('123Ninjutsu');
+        $admin->save();
+        $admin->roles()->attach($role_admin);
+
+        $admin = new User;
         $admin->name = 'Admin';
         $admin->email = 'rio@gmail.com';
         $admin->password = bcrypt('admin');
