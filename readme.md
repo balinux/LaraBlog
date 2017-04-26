@@ -1,40 +1,52 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+#CODEANYWHERE FIX
+1.  need install for php 7
+2.  sudo apt-get install php7.0-dom php7.0-mbstring
+3.  sudo apt-get install mcrypt php7.0-mcrypt
+>     -add .htaccess
+>       <IfModule mod_rewrite.c>
+>       RewriteEngine on
+>       RewriteRule ^(.*)$ public/$1 [L]
+>       </IfModule>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+**UPGRADE PHP 5.5 ke 7.0 **
+*  apt-get install software-properties-common
+*  sudo apt-get install -y language-pack-en-base && sudo LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php
+*  sudo apt-get update
+*  sudo apt-get update && sudo apt-get purge php5-fpm && sudo apt-get --purge autoremove && sudo apt-get install php7.0-fpm php7.0-mysql php7.0-curl php7.0-gd php7.0-json php7.0-mcrypt php7.0-opcache php7.0-xml 
+* sudo apt-get install php7.0 php7.0-mysql libapache2-mod-php7.0 php7.0-mcrypt php7.0-curl
+* sudo a2dismod php5
+* sudo a2enmod php7.0
+*  sudo apt-get install mcrypt php7.0-mcrypt
+*  sudo apt-get install php7.0-mbstring
 
-## About Laravel
+**#Masalah storage**
+1.  composer update
+2.  Try the following commands on your shell:
+3.  
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+**Clear Laravel cache and the compiled classes**
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+> php artisan cache:clear
+> 
+> php artisan clear-compiled
+> Change the storage and cache directories permission
+> 
+> sudo chmod -R 777 storage
+> 
+> sudo chmod -R 777 bootstrap/cache
+> Regenerate the composer autoload file
+> 
+> composer dump-autoload
+> 
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
 
-## Learning Laravel
+----------
+##link Penting untuk upgrade PHP ##
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+https://www.bjornjohansen.no/upgrade-to-php7
+https://www.stewright.me/2016/03/upgrade-php-7-0-ubuntu/
+http://stackoverflow.com/questions/35715400/laravel-5-2-could-not-open-laravel-log
+http://stackoverflow.com/questions/28468625/laravel-5-failed-opening-required-bootstrap-vendor-autoload-php
+https://discuss.flarum.org/d/3741-after-installed-php7-then-i-run-composer-install-getting-errors
+https://laracasts.com/discuss/channels/forge/error-while-updating-to-php-70-on-forge
