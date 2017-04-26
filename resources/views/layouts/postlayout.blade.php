@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>Admin - Dekte.com</title>
 
     <link rel="stylesheet" href="{{asset('css/dropzone.min.css')}}" />
 
@@ -47,7 +47,7 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
+              <a class="navbar-brand" href="index.html">Admin Dashboard</a>
           </div>
           <!-- /.navbar-header -->
 
@@ -387,6 +387,24 @@
       <!-- Custom Theme JavaScript -->
       <script src="{{asset('/dist/js/sb-admin-2.js')}}"></script>
 
+      <!--  START CK EDITOR-->
+      <!-- <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+      <script>
+        var options = {
+          filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+          filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
+          filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+          filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
+        };
+      </script>
+
+      <script>
+      CKEDITOR.replace('my-editor', options);
+      </script> -->
+      <!-- END CK-EDITOR -->
+
+      <!-- START tiny-MCE -->
+
       <script type="text/javascript" src="{{asset('js/tinymce.min.js')}}"></script>
 
        <!-- <script>tinymce.init({ selector:'textarea' });</script> -->
@@ -426,6 +444,11 @@
 
           tinymce.init(editor_config);
         </script>
+
+
+
+         <!-- END tinyMCE -->
+
        <script src="{{asset('js/dropzone.js')}}"></script>
   </body>
 

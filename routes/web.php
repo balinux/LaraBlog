@@ -24,9 +24,15 @@ Route::get('/show/{slug}','blogController@show');
 
 // Resource
 Route::Resource('/post','postController');
+Route::get('list/user',[
+  'uses'      =>  'postController@listuser',
+  'as'        =>  'list.user',
+  'middleware'=>  'roles',
+  'roles'     =>  ['Admin','Author']
+  ]);
+Route::post('list/user','postController@adminAssignRole');
 
 // social login
-
 // Route::get('/redirect','SocialAuthController@redirectToProvider');
 // Route::get('/callback','SocialAuthController@handleProviderCallback');
 

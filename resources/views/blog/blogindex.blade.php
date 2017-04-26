@@ -72,7 +72,7 @@
 				</div>
 				<div class="blo-top1">
 					<div class="tech-btm">
-					<h4>Top stories of the week </h4>
+					<h4>Recents </h4>
 
 					@foreach($side as $side)
 						<div class="blog-grids">

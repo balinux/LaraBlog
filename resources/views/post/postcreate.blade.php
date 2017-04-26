@@ -44,6 +44,7 @@
                                     <div class="form-group">
                                         <label>body</label>
                                         <textarea class="form-control my-editor" rows="3" name="body"></textarea>
+                                        <!-- <textarea id="my-editor" name="content" class="form-control">{!! old('content', 'test editor content') !!}</textarea> -->
                                     </div>
 
                                     <button type="submit" class="btn btn-default">Submit Button</button>

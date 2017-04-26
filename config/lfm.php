@@ -1,5 +1,6 @@
 <?php
 
+use App\Auth;
 return [
     /*
     |--------------------------------------------------------------------------
@@ -12,7 +13,7 @@ return [
 
     // Middlewares which should be applied to all package routes.
     // For laravel 5.1 and before, remove 'web' from the array.
-    'middlewares' => ['web','auth'],
+    'middlewares' => ['web','auth','roles'],
 
     // The url to this package. Change it if necessary.
     'prefix' => 'laravel-filemanager',
@@ -30,7 +31,7 @@ return [
 
     // The database column to identify a user. Make sure the value is unique.
     // Ex: When set to 'id', the private folder of user will be named as the user id.
-    'user_field' => 'id',
+    'user_field' => 'Auth::User()->id',
 
     /*
     |--------------------------------------------------------------------------
@@ -77,8 +78,8 @@ return [
     // If true, the uploading file's size will be verified for over than max_image_size/max_file_size.
     'should_validate_size' => false,
 
-    'max_image_size' => 50000,
-    'max_file_size' => 50000,
+    'max_image_size' => 5000,
+    'max_file_size' => 5000,
 
     // If true, the uploading file's mime type will be valid in valid_image_mimetypes/valid_file_mimetypes.
     'should_validate_mime' => false,

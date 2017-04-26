@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Business_Blog a Blogging Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+<title>BLog for share everithing what u want</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Business_Blog Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
@@ -39,6 +39,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<li><a href="#" class="facebook beh"> </a></li>
 								<li><a href="#" class="facebook vem"> </a></li>
 								<li><a href="#" class="facebook yout"> </a></li>
+                <li><a href="#" class="facebook login"> </a></li>
 							</ul>
 						</div>
 						<div class="clearfix"></div>
