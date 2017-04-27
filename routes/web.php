@@ -23,13 +23,18 @@ Route::get('/','blogController@index');
 Route::get('/show/{slug}','blogController@show');
 
 // Resource
-Route::Resource('/post','postController');
+Route::Resource('/post',[
+  'uses'      =>'postController',
+  'middleware'=>'roles',
+  'roles'     =>['Admin','Author']
+]);
 Route::get('list/user',[
   'uses'      =>  'postController@listuser',
   'as'        =>  'list.user',
   'middleware'=>  'roles',
   'roles'     =>  ['Admin','Author']
   ]);
+
 Route::post('list/user','postController@adminAssignRole');
 
 // social login
