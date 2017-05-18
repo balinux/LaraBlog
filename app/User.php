@@ -57,7 +57,7 @@ class User extends Authenticatable
       /**
        * method ini berfungsi untuk handle roles model pada model user
        * penggunaan di bagia postuserlist.blade.php
-       * returnt berupa true/false karna menggunakan checkbox 
+       * return berupa true/false karna menggunakan checkbox
        */
     public function hasRole($role)
     {
@@ -66,5 +66,12 @@ class User extends Authenticatable
       }
       return false;
     }
+
+    //
+    // public function scopewhatRole($id)
+    // {
+    //
+    // return $this->roles()->where('id', $id)->first();
+    // }
 
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Auth;
 use App\User;
+use App\Role;
 use Socialite;
 use Illuminate\Http\Request;
 
@@ -38,6 +39,7 @@ public function handleProviderCallback()
   }
   private function findOrCreate($facebookUser)
   {
+    $role_author = Role::where('name', 'Author')->first();
      $fbuser = User::where('fb_id', $facebookUser->id)->first();
      if ($fbuser) {
        return $fbuser;
@@ -48,6 +50,7 @@ public function handleProviderCallback()
          'fb_id'  =>  $facebookUser->id,
          'avatar' =>  $facebookUser->avatar
        ]);
+      //  roles()->attach($role_author);
      }
   }
 }

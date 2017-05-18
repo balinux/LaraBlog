@@ -38,8 +38,8 @@ return [
     'facebook' => [
     'client_id' => '455380414794213',
     'client_secret' => '50c656771530aae6c198f4dffc695ca8',
-    // 'redirect' => 'http://larablog.dev/login/facebook/callback',
-    'redirect' => 'http://larablog-ryojuniyantara632571.codeanyapp.com/login/facebook/callback',
+    'redirect' => 'http://larablog.dev/login/facebook/callback',
+    // 'redirect' => 'http://larablog-ryojuniyantara632571.codeanyapp.com/login/facebook/callback',
     ],
 
 ];

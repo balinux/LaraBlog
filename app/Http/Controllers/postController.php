@@ -14,11 +14,24 @@ class postController extends Controller
     public function __construct()
     {
       $this->middleware('auth');
+      // $this->middleware('roles:Admin,Author,User');
     }
 
     public function index()
     {
-      $post = Post::all();
+      $user = User::where('id', Auth::user()->id)->first();
+      foreach ($user->roles as $role) {
+        $role_name =  $role->name;
+      }
+      if ($role_name === 'Admin') {
+        $post = Post::all();
+      }else {
+        $post = Post::where('author_id', Auth::user()->id)->get();
+        // $post = Post::where('author_id', 21)->get();
+      }
+      // return Auth::user()->id;
+
+
       // return $post;
       return view('post.postindex',compact('post'));
     }
@@ -101,10 +114,18 @@ class postController extends Controller
 
     public function listuser()
         {
+
           $user = User::all();
           // return $user;
           return view('post.postuserlist',compact('user'));
         }
+
+      // return $request->all();
+      $user = User::where('id', $request->id)->first();
+      $user->roles()->detach();
+      $user->delete();
+      return redirect()->back();
+    }
 
     public function adminAssignRole(Request $request)
     {

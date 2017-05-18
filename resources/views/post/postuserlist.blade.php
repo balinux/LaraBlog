@@ -47,6 +47,14 @@
                                           <td><input type="checkbox" {{$user->hasRole('Author') ? 'checked' : ''}} name="role_author" ></td>
                                           <td><input type="checkbox" {{$user->hasRole('User') ? 'checked' : ''}} name="role_user" ></td>
                                           <td> <button type="submit" class="btn btn-primary">submit</button></td>
+                                          </form>
+                                          <td>
+                                            <form class="" action="{{url('list/user/'.$user->id)}}" method="post">
+                                              {{csrf_field()}}
+                                              {{method_field('delete')}}
+                                              <input type="hidden" name="id" value="{{$user->id}}">
+                                              <button type="submit" class="btn btn-danger">Delete</button>
+                                            </td>
                                         </form>
                                         </tr>
                                           @endforeach
