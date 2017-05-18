@@ -120,6 +120,8 @@ class postController extends Controller
           return view('post.postuserlist',compact('user'));
         }
 
+    public function deluser(Request $request,$id)
+    {
       // return $request->all();
       $user = User::where('id', $request->id)->first();
       $user->roles()->detach();
